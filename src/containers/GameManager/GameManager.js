@@ -32,7 +32,6 @@ class GameManager extends Component {
 
         return (
             <Aux>
-                <p className={styles.NextLabel}>Next Row:</p>
                 <main className = {styles.NextRowWindow}>
                     <div className = {styles.NextBlock1}>
                         <RowBlock type={this.state.nextBlock1}/>
@@ -44,6 +43,7 @@ class GameManager extends Component {
                         <RowBlock type={this.state.nextBlock3}/>
                     </div>
                 </main>
+                <p className={styles.NextLabel}>Next Row</p>
                 <main className={styles.Grid}>
                     <RowFactory 
                         leftPos={this.state.rowObjHorz}
