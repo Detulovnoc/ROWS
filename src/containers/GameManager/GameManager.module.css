@@ -2,6 +2,31 @@
     font-size: 50pt;
 }
 
+.NextLabel {
+    font-size: 25pt;
+}
+
+.NextRowWindow {
+    background: url('NextRowGrid.png') round;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+}
+
+.NextBlock1 {
+    margin-left: 0px;
+}
+
+.NextBlock2 {
+    margin-left: 50px;
+    margin-top: -50px;
+}
+
+.NextBlock3 {
+    margin-left: 100px;
+    margin-top: -50px;
+}
+
 .Grid {
     background: url('PlacementGrid.png') round;
     width: 900px;

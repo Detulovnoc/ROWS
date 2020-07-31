@@ -20,6 +20,9 @@ class GameManager extends Component {
             rowObjBlock1: 0,
             rowObjBlock2: 0,
             rowObjBlock3: 0,
+            nextBlock1: Math.floor((Math.random() * 4)) + 1,
+            nextBlock2: Math.floor((Math.random() * 4)) + 1,
+            nextBlock3: Math.floor((Math.random() * 4)) + 1,
             score: 0,
             gameOver: false
         }
@@ -29,6 +32,18 @@ class GameManager extends Component {
 
         return (
             <Aux>
+                <p className={styles.NextLabel}>Next Row:</p>
+                <main className = {styles.NextRowWindow}>
+                    <div className = {styles.NextBlock1}>
+                        <RowBlock type={this.state.nextBlock1}/>
+                    </div>
+                    <div className = {styles.NextBlock2}>
+                        <RowBlock type={this.state.nextBlock2}/>
+                    </div>
+                    <div className = {styles.NextBlock3}>
+                        <RowBlock type={this.state.nextBlock3}/>
+                    </div>
+                </main>
                 <main className={styles.Grid}>
                     <RowFactory 
                         leftPos={this.state.rowObjHorz}
@@ -219,9 +234,12 @@ class GameManager extends Component {
                 rowObjHorz: originPos,
                 rowObjVert: 0,
                 rowObjDir: startDir,
-                rowObjBlock1: block1,
-                rowObjBlock2: block2,
-                rowObjBlock3: block3,
+                rowObjBlock1: this.state.nextBlock1,
+                rowObjBlock2: this.state.nextBlock2,
+                rowObjBlock3: this.state.nextBlock3,
+                nextBlock1: block1,
+                nextBlock2: block2,
+                nextBlock3: block3,
             }, function() {console.log(this.state)});  
         }
         else
@@ -233,6 +251,9 @@ class GameManager extends Component {
                 rowObjBlock1: 0,
                 rowObjBlock2: 0,
                 rowObjBlock3: 0,
+                nextBlock1: 0,
+                nextBlock2: 0,
+                nextBlock3: 0,
                 gameOver: true
             }, function() {console.log(this.state)});  
         }
