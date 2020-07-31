@@ -1,0 +1,16 @@
+.RowBlockWhole{    
+    transition: 'all 0.1s ease';
+    position: relative;
+}
+
+.RowBlock1{    
+    margin: 0px 0px 0px 0px;
+}
+
+.RowBlock2{
+    margin: -50px 0px 0px 50px;
+}
+
+.RowBlock3{
+    margin: -50px 0px 0px 100px;
+}

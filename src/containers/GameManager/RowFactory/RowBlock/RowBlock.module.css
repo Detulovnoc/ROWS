@@ -1,0 +1,28 @@
+.Diamond{
+    background: url('RowBlockDiamond.png') round;
+    width: 50px;
+    height: 50px;
+}
+
+.Emerald{
+    background: url('RowBlockEmerald.png') round;
+    width: 50px;
+    height: 50px;
+}
+
+.Ruby{
+    background: url('RowBlockRuby.png') round;
+    width: 50px;
+    height: 50px;
+}
+
+.Sapphire{
+    background: url('RowBlockSapphire.png') round;
+    width: 50px;
+    height: 50px;
+}
+
+.Empty{
+    width:50px;
+    height:50px;
+}

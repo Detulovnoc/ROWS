@@ -1,0 +1,102 @@
+.Score {
+    font-size: 50pt;
+}
+
+.Grid {
+    background: url('PlacementGrid.png') round;
+    width: 900px;
+    height: 450px;
+    margin: auto;
+}
+
+.Column0 {    
+    margin-left: 0px;
+    margin-top: -50px;
+}
+
+.Column1 {    
+    margin-left: 50px;
+    margin-top: -450px;
+}
+
+.Column2 {    
+    margin-left: 100px;
+    margin-top: -450px;
+}
+
+.Column3 {    
+    margin-left: 150px;
+    margin-top: -450px;
+}
+
+.Column4 {    
+    margin-left: 200px;
+    margin-top: -450px;
+}
+
+.Column5 {    
+    margin-left: 250px;
+    margin-top: -450px;
+}
+
+.Column6 {    
+    margin-left: 300px;
+    margin-top: -450px;
+}
+
+.Column7 {    
+    margin-left: 350px;
+    margin-top: -450px;
+}
+
+.Column8 {    
+    margin-left: 400px;
+    margin-top: -450px;
+}
+
+.Column9 {    
+    margin-left: 450px;
+    margin-top: -450px;
+}
+
+.Column10 {    
+    margin-left: 500px;
+    margin-top: -450px;
+}
+
+.Column11 {    
+    margin-left: 550px;
+    margin-top: -450px;
+}
+
+.Column12 {    
+    margin-left: 600px;
+    margin-top: -450px;
+}
+
+.Column13 {    
+    margin-left: 650px;
+    margin-top: -450px;
+}
+
+.Column14 {    
+    margin-left: 700px;
+    margin-top: -450px;
+}
+
+.Column15 {    
+    margin-left: 750px;
+    margin-top: -450px;
+}
+
+.Column16 {    
+    margin-left: 800px;
+    margin-top: -450px;
+}
+
+.Column17 {    
+    margin-left: 850px;
+    margin-top: -450px;
+}
+
+
