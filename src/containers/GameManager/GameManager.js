@@ -25,6 +25,7 @@ class GameManager extends Component {
             nextBlock3: Math.floor((Math.random() * 4)) + 1,
             score: 0,
             speed: 1000,
+            level: 1,
             gameOver: false
         }
     };
@@ -110,6 +111,7 @@ class GameManager extends Component {
                     </div>                  
                 </main>
                 <p className={styles.Score}>Score: {this.state.score}</p>
+                <p className={styles.NextLabel}>Level: {this.state.level}</p>
                 <p className={styles.Score}>{this.state.gameOver ? "Game Over" : ""}</p>
             </Aux>
         );
@@ -288,13 +290,14 @@ class GameManager extends Component {
             this.incAndShift();            
             this.scoreArray.length = 1;
             this.updateScore();
-            const speedMult = this.state.speed - 10;
-            if(this.state.score > 1000 && speedMult > 90)
+            const speedMult = this.state.speed - 25;
+            if((this.state.score > (1000 * this.state.level)) && speedMult >= 100)
             {
                 clearInterval(this.gameInterval);
                 this.gameInterval = setInterval(this.updateRowObj, speedMult);                            
                 this.setState({
-                    speed: speedMult
+                    speed: speedMult,
+                    level: this.state.level + 1
                 }, function() {console.log(this.state)});
             }
         }
