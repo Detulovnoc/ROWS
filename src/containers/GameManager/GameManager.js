@@ -24,6 +24,7 @@ class GameManager extends Component {
             nextBlock2: Math.floor((Math.random() * 4)) + 1,
             nextBlock3: Math.floor((Math.random() * 4)) + 1,
             score: 0,
+            speed: 1000,
             gameOver: false
         }
     };
@@ -287,15 +288,14 @@ class GameManager extends Component {
             this.incAndShift();            
             this.scoreArray.length = 1;
             this.updateScore();
-            if(this.state.score % 1000 === 0)
+            const speedMult = this.state.speed - 10;
+            if(this.state.score > 1000 && speedMult > 90)
             {
-                const speedMult = this.state.score / 1000;
-                if(speedMult < 500)
-                {
-                    this.gameInterval = setInterval(this.updateRowObj, 1000 - speedMult);                            
-                    this.setState({
-                    }, function() {console.log(this.state)});
-                }
+                clearInterval(this.gameInterval);
+                this.gameInterval = setInterval(this.updateRowObj, speedMult);                            
+                this.setState({
+                    speed: speedMult
+                }, function() {console.log(this.state)});
             }
         }
     }
@@ -681,7 +681,8 @@ class GameManager extends Component {
     initialize = () => {
         this.gameInterval = setInterval(this.updateRowObj, 1000);
         this.setState({
-            score: 0
+            score: 0,
+            speed: 1000
         }, function() {console.log(this.state)});
         this.resetActiveObject();
     }
