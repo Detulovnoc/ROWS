@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import RowFactory from '../../containers/GameManager/RowFactory/RowFactory'
 import RowBlock from '../../containers/GameManager/RowFactory/RowBlock/RowBlock'
 import Aux from '../../hoc/_Aux'
+import Modal from '../../components/Modal/Modal';
 import {pluck, LEFT, RIGHT, DOWN, STOP} from '../../hoc/utils'
 import styles from './GameManager.module.css'
 
@@ -26,7 +27,7 @@ class GameManager extends Component {
             score: 0,
             speed: 1000,
             level: 1,
-            gameOver: false
+            gameOver: true
         }
     };
 
@@ -34,6 +35,14 @@ class GameManager extends Component {
 
         return (
             <Aux>
+                <Modal show={this.state.gameOver} modalClosed={this.startGame}>
+                    <p className={styles.Fullsize}>How To Play:</p>
+                    <p className={styles.Midsize}>Use the active row to match gems and achieve a high score!</p> 
+                    <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
+                    <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p> 
+                    <p className={styles.Midsize}>Shift the gems in the active row with w key.</p> 
+                    <p className={styles.Fullsize}>Click background to Start</p>
+                </Modal>                
                 <main className = {styles.NextRowWindow}>
                     <div className = {styles.NextBlock1}>
                         <RowBlock type={this.state.nextBlock1}/>
@@ -45,7 +54,7 @@ class GameManager extends Component {
                         <RowBlock type={this.state.nextBlock3}/>
                     </div>
                 </main>
-                <p className={styles.NextLabel}>Next Row</p>
+                <p className={styles.Midsize}>Next Row</p>
                 <main className={styles.Grid}>
                     <RowFactory 
                         leftPos={this.state.rowObjHorz}
@@ -110,9 +119,9 @@ class GameManager extends Component {
                         {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 50) + 'px'}} className = {styles.Column1} type={gridBlock} />})}
                     </div>                  
                 </main>
-                <p className={styles.Score}>Score: {this.state.score}</p>
-                <p className={styles.NextLabel}>Level: {this.state.level}</p>
-                <p className={styles.Score}>{this.state.gameOver ? "Game Over" : ""}</p>
+                <p className={styles.Fullsize}>Score: {this.state.score}</p>
+                <p className={styles.Midsize}>Level: {this.state.level}</p>                
+                <p className={styles.Fullsize}>{this.state.gameOver ? "Game Over" : ""}</p>
             </Aux>
         );
     }
@@ -147,7 +156,7 @@ class GameManager extends Component {
         else if(this.state.rowObjDir === LEFT) {
             if(this.state.rowObjHorz > 0)
             {
-                if(this.state.rowObjHorz > 1 && (this.rowBoard[this.state.rowObjHorz -1][0] !== 0))
+                if(this.state.rowObjHorz > 0 && (this.rowBoard[this.state.rowObjHorz -1][0] !== 0))
                 {
                     dir = DOWN;
                     update = true;
@@ -247,6 +256,7 @@ class GameManager extends Component {
         }
         else
         {
+            clearInterval(this.gameInterval);
             this.setState({
                 rowObjHorz: 0,
                 rowObjVert: 0,
@@ -680,24 +690,24 @@ class GameManager extends Component {
     startGame = () => {
         this.initialize();
     }
+
+    componentDidMount () {
+        window.onkeydown = this.handleKeyDown;
+    }
     
     initialize = () => {
+        clearInterval(this.gameInterval);
         this.gameInterval = setInterval(this.updateRowObj, 1000);
+        this.rowBoard = new Array(18).fill(0).map(() => new Array(9).fill(0));
         this.setState({
             score: 0,
-            speed: 1000
+            speed: 1000,
+            level: 1,
+            gameOver: false
         }, function() {console.log(this.state)});
         this.resetActiveObject();
     }
 
-    componentDidMount() {
-        this.startGame();
-        window.onkeydown = this.handleKeyDown;
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.gameInterval);
-    }
 }
 
 export default GameManager;
