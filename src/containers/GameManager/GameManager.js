@@ -36,11 +36,13 @@ class GameManager extends Component {
         return (
             <Aux>
                 <Modal show={this.state.gameOver} modalClosed={this.startGame}>
-                    <p className={styles.Fullsize}>How To Play:</p>
+                    <p className={styles.Fullsize}>ROWS</p>
+                    <p className={styles.Midsize}>How To Play:</p>
                     <p className={styles.Midsize}>Use the active row to match gems and achieve a high score!</p> 
                     <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
                     <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p> 
                     <p className={styles.Midsize}>Shift the gems in the active row with w key.</p> 
+                    <p className={styles.Midsize}>The game is over when both top corners are blocked.</p> 
                     <p className={styles.Fullsize}>Click background to Start</p>
                 </Modal>                
                 <main className = {styles.NextRowWindow}>
@@ -264,9 +266,9 @@ class GameManager extends Component {
                 rowObjBlock1: 0,
                 rowObjBlock2: 0,
                 rowObjBlock3: 0,
-                nextBlock1: 0,
-                nextBlock2: 0,
-                nextBlock3: 0,
+                nextBlock1: Math.floor((Math.random() * 4)) + 1,
+                nextBlock2: Math.floor((Math.random() * 4)) + 1,
+                nextBlock3: Math.floor((Math.random() * 4)) + 1,
                 gameOver: true
             }, function() {console.log(this.state)});  
         }
