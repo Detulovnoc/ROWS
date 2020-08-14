@@ -300,18 +300,21 @@ class GameManager extends Component {
         }
         if(updateScore === true){
             this.incAndShift();            
-            this.scoreArray.length = 1;
-            this.updateScore();
+            this.scoreArray.length = 1;            
             const speedSetting = this.state.speed - 25;
             if((this.state.score > (1000 * this.state.level)) && speedSetting >= 100)
-            {
-                clearInterval(this.gameInterval);
-                this.gameInterval = setInterval(this.updateRowObj, speedMult);                            
+            {                          
                 this.setState({
-                    speed: speedMult,
+                    speed: speedSetting,
                     level: this.state.level + 1
                 }, function() {console.log(this.state)});
             }
+            clearInterval(this.gameInterval);
+            this.gameInterval = setInterval(this.updateScore, 500);
+        }
+        else{
+            clearInterval(this.gameInterval);
+            this.gameInterval = setInterval(this.updateRowObj, this.state.speed);              
         }
     }
 
