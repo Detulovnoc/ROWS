@@ -302,8 +302,8 @@ class GameManager extends Component {
             this.incAndShift();            
             this.scoreArray.length = 1;
             this.updateScore();
-            const speedMult = this.state.speed - 25;
-            if((this.state.score > (1000 * this.state.level)) && speedMult >= 150)
+            const speedSetting = this.state.speed - 25;
+            if((this.state.score > (1000 * this.state.level)) && speedSetting >= 100)
             {
                 clearInterval(this.gameInterval);
                 this.gameInterval = setInterval(this.updateRowObj, speedMult);                            
