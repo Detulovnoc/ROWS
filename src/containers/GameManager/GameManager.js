@@ -41,8 +41,9 @@ class GameManager extends Component {
                     <p className={styles.Midsize}>How To Play:</p>
                     <p className={styles.Midsize}>Use the active row to match gems and achieve a high score!</p> 
                     <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
-                    <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p> 
-                    <p className={styles.Midsize}>Shift the gems in the active row with w key.</p> 
+                    <p className={styles.Midsize}>Move the active row left, down, or right with a, s, d, or arrow keys.</p> 
+                    <p className={styles.Midsize}>Shift the gems in the active row with w or up key.</p> 
+                    <p className={styles.Midsize}>The active row can also be moved via swiping and shifted via tapping.</p> 
                     <p className={styles.Midsize}>The game is over when both top corners are blocked.</p> 
                     <p className={styles.Fullsize}>Click background to Start</p>
                 </Modal>                
@@ -641,56 +642,76 @@ class GameManager extends Component {
         }
         return retVal;
     }
+
+    rotateBlock = () => {
+        const block1 = this.state.rowObjBlock2;
+        const block2 = this.state.rowObjBlock3;
+        const block3 = this.state.rowObjBlock1;
+        this.setState({
+            rowObjBlock1: block1,
+            rowObjBlock2: block2,
+            rowObjBlock3: block3,
+        }, function() {console.log(this.state)});
+    }
+
+    moveBlockDown = () => {
+        if(((this.rowBoard[this.state.rowObjHorz][this.state.rowObjVert + 1] !== 0) ||
+            (this.rowBoard[this.state.rowObjHorz + 1][this.state.rowObjVert + 1] !== 0) ||
+            (this.rowBoard[this.state.rowObjHorz + 2][this.state.rowObjVert + 1] !== 0)))
+        {
+            console.log("movement blocked");
+        }
+        else if(this.state.rowObjVert < 8){
+            const downMove = this.state.rowObjVert + 1;
+            this.setState({rowObjVert: downMove,
+                            rowObjDir: DOWN}
+            , function() {console.log(this.state)});
+        }        
+    }
+
+    moveBlockLeft = () => {
+        if(this.state.rowObjHorz > 1 && (this.rowBoard[this.state.rowObjHorz - 1][this.state.rowObjVert] !== 0))
+        {
+            console.log("movement blocked");
+        }
+        else if(this.state.rowObjHorz > 0){
+            const leftMove = this.state.rowObjHorz - 1;
+            this.setState({rowObjHorz: leftMove,
+                        rowObjDir: DOWN}
+            , function() {console.log(this.state)});                        
+        }
+    } 
+
+    moveBlockRight = () => {
+        if(this.state.rowObjHorz < 14 && (this.rowBoard[this.state.rowObjHorz + 3][this.state.rowObjVert] !== 0))
+        {
+            console.log("movement blocked");
+        }
+        else if(this.state.rowObjHorz < 15){
+            const rightMove = this.state.rowObjHorz + 1;
+            this.setState({rowObjHorz: rightMove,
+                            rowObjDir: DOWN}
+            , function() {console.log(this.state)});
+        }
+    }
     
     handleKeyDown = (key) => {
         switch(key.keyCode) {
+            case 38:
             case 87:
-                const block1 = this.state.rowObjBlock2;
-                const block2 = this.state.rowObjBlock3;
-                const block3 = this.state.rowObjBlock1;
-                this.setState({
-                    rowObjBlock1: block1,
-                    rowObjBlock2: block2,
-                    rowObjBlock3: block3,
-                }, function() {console.log(this.state)}); 
+                this.rotateBlock; 
                 break;
+            case 40:
             case 83:
-                if(((this.rowBoard[this.state.rowObjHorz][this.state.rowObjVert + 1] !== 0) ||
-                    (this.rowBoard[this.state.rowObjHorz + 1][this.state.rowObjVert + 1] !== 0) ||
-                    (this.rowBoard[this.state.rowObjHorz + 2][this.state.rowObjVert + 1] !== 0)))
-                {
-                    console.log("movement blocked");
-                }
-                else if(this.state.rowObjVert < 8){
-                    const downMove = this.state.rowObjVert + 1;
-                    this.setState({rowObjVert: downMove,
-                                    rowObjDir: DOWN}
-                    , function() {console.log(this.state)});
-                }
+                this.moveBlockDown;
                 break;
+            case 37:
             case 65:
-                if(this.state.rowObjHorz > 1 && (this.rowBoard[this.state.rowObjHorz - 1][this.state.rowObjVert] !== 0))
-                {
-                    console.log("movement blocked");
-                }
-                else if(this.state.rowObjHorz > 0){
-                    const leftMove = this.state.rowObjHorz - 1;
-                    this.setState({rowObjHorz: leftMove,
-                                rowObjDir: DOWN}
-                    , function() {console.log(this.state)});                        
-                }
+                this.moveBlockLeft;
                 break;
+            case 39:
             case 68:
-                if(this.state.rowObjHorz < 14 && (this.rowBoard[this.state.rowObjHorz + 3][this.state.rowObjVert] !== 0))
-                {
-                    console.log("movement blocked");
-                }
-                else if(this.state.rowObjHorz < 15){
-                    const rightMove = this.state.rowObjHorz + 1;
-                    this.setState({rowObjHorz: rightMove,
-                                    rowObjDir: DOWN}
-                    , function() {console.log(this.state)});
-                }
+                this.moveBlockRight;
                 break;
             default:
                 break;
@@ -699,12 +720,60 @@ class GameManager extends Component {
         console.log ('pressed key ' + key.keyCode);
     }
 
+    touchHandler = () => {
+        
+    }
+
+    startTouch = () => {
+        window.onmousedown = null;
+        // once we have a touch started, then we look for movement or just a tap
+        window.ontouchmove = this.moveTouch;
+        window.ontouchend = this.endTouchTap;
+    }
+
+    moveTouch = () => {
+        window.onmousemove = null;
+        // once we know our touch is moving, we specify a different end function for the tap motion 
+        window.ontouchend = this.endTouchMove;
+    }
+
+    endTouchTap = () => {
+        window.onmouseup = null;
+        // we know a tap has ended, and we know that there was no motion, so now we rotate the blocks
+        window.ontouchmove = null;
+        window.ontouchend = null;
+        this.rotateBlock;
+    }
+
+    endTouchMove = () => {
+        window.onmouseup = null;
+        // we know a tap has ended, and we know that there was a motion, so now we figure out the direction to move the blocks
+        window.ontouchmove = null;
+        window.ontouchend = null;
+
+        var horzDir = event.touches[0].clientX - event.changedTouches[0].clientX;
+        if (horzDir > 0) {
+            // greater than 0 - move right
+            this.rightMove;
+        }
+        else if (horzDir < 0) {
+            // less than 0 - move left
+            this.leftMove;
+        }
+        else {
+            // no left/right motion - move down
+            this.downMove;
+        }
+    }
+
     startGame = () => {
         this.initialize();
     }
 
     componentDidMount () {
         window.onkeydown = this.handleKeyDown;
+        // touch controls! we start by checking for touch start only
+        window.ontouchstart = this.startTouch;
     }
     
     initialize = () => {
