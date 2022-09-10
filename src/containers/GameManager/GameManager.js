@@ -363,10 +363,11 @@ class GameManager extends Component {
     checkForScore = (column, row) => {
         const checkVal = this.rowBoard[column][row];
         let retVal = false;
+        var top, left, right, bot = null
         console.log("Begin Score Check");
         // check left of current position
         if(column > 0) {
-            for(var left = column - 1; left >= 0; left--){
+            for( left = column - 1; left >= 0; left--){
                 if(this.rowBoard[left][row] === checkVal){
                     // we need to make sure we have at least 3 in a sequence
                     // all the complicated scenarios are attached to the adjacent block
@@ -398,7 +399,7 @@ class GameManager extends Component {
         }
         // check right of current position
         if(column < 17){
-            for(var right = column + 1; right <= 17; right++){
+            for( right = column + 1; right <= 17; right++){
                 if(this.rowBoard[right][row] === checkVal){
                     // we need to make sure we have at least 3 in a sequence
                     // all the complicated scenarios are attached to the adjacent block
@@ -430,7 +431,7 @@ class GameManager extends Component {
         }
         // check above of current position
         if(row > 0) {
-            for(var top = row - 1; top >= 0; top--){
+            for( top = row - 1; top >= 0; top--){
                 if(this.rowBoard[column][top] === checkVal){
                     // we need to make sure we have at least 3 in a sequence
                     // all the complicated scenarios are attached to the adjacent block
@@ -462,7 +463,7 @@ class GameManager extends Component {
         }
         // check below of current position
         if(row < 8){
-            for(var bot = row + 1; bot <= 8; bot++){
+            for( bot = row + 1; bot <= 8; bot++){
                 if(this.rowBoard[column][bot] === checkVal){
                     // we need to make sure we have at least 3 in a sequence
                     // all the complicated scenarios are attached to the adjacent block
@@ -494,8 +495,8 @@ class GameManager extends Component {
         }
         // check top left of current position
         if(column > 0 && row > 0){
-            var top = row;
-            for(var left = column - 1; left >= 0; left--){
+            top = row;
+            for( left = column - 1; left >= 0; left--){
                 if(top - 1 >= 0) {
                     top--;
                     if(this.rowBoard[left][top] === checkVal){
@@ -530,8 +531,8 @@ class GameManager extends Component {
         }
         // check bot left of current position
         if(column > 0 && row < 8){
-            var bot = row;
-            for(var left = column - 1; left >= 0; left--){
+            bot = row;
+            for( left = column - 1; left >= 0; left--){
                 if(bot + 1 <= 8) {
                     bot++;
                     if(this.rowBoard[left][bot] === checkVal){
@@ -566,8 +567,8 @@ class GameManager extends Component {
         }
         // check top right of current position
         if(column < 17 && row > 0){
-            var top = row;
-            for(var right = column + 1; right <= 17; right++){
+            top = row;
+            for( right = column + 1; right <= 17; right++){
                 if(top - 1 >= 0) {
                     top--;
                     if(this.rowBoard[right][top] === checkVal){
@@ -602,8 +603,8 @@ class GameManager extends Component {
         }
         // check bot right of current position
         if(column < 17 && row < 8){
-            var bot = row;
-            for(var right = column + 1; left <= 17; left++){
+            bot = row;
+            for( right = column + 1; left <= 17; left++){
                 if(bot + 1 <= 8) {
                     bot++;
                     if(this.rowBoard[right][bot] === checkVal){
@@ -699,19 +700,19 @@ class GameManager extends Component {
         switch(key.keyCode) {
             case 38:
             case 87:
-                this.rotateBlock; 
+                this.rotateBlock(); 
                 break;
             case 40:
             case 83:
-                this.moveBlockDown;
+                this.moveBlockDown();
                 break;
             case 37:
             case 65:
-                this.moveBlockLeft;
+                this.moveBlockLeft();
                 break;
             case 39:
             case 68:
-                this.moveBlockRight;
+                this.moveBlockRight();
                 break;
             default:
                 break;
@@ -742,10 +743,10 @@ class GameManager extends Component {
         // we know a tap has ended, and we know that there was no motion, so now we rotate the blocks
         window.ontouchmove = null;
         window.ontouchend = null;
-        this.rotateBlock;
+        this.rotateBlock();
     }
 
-    endTouchMove = () => {
+    endTouchMove = (event) => {
         window.onmouseup = null;
         // we know a tap has ended, and we know that there was a motion, so now we figure out the direction to move the blocks
         window.ontouchmove = null;
@@ -754,15 +755,15 @@ class GameManager extends Component {
         var horzDir = event.touches[0].clientX - event.changedTouches[0].clientX;
         if (horzDir > 0) {
             // greater than 0 - move right
-            this.rightMove;
+            this.rightMove();
         }
         else if (horzDir < 0) {
             // less than 0 - move left
-            this.leftMove;
+            this.leftMove();
         }
         else {
             // no left/right motion - move down
-            this.downMove;
+            this.downMove();
         }
     }
 
