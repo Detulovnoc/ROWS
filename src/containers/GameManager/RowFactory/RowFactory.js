@@ -9,8 +9,8 @@ class RowFactory extends Component {
     
     render() {
 
-        let left = (this.props.leftPos * 50) + 'px';
-        let top = (this.props.topPos * 50) + 'px';
+        let left = (this.props.leftPos * 2.5) + 'rem';
+        let top = (this.props.topPos * 2.5) + 'rem';
 
         const activeObject = 
         <Aux>
