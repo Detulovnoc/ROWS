@@ -14,3 +14,17 @@
 .RowBlock3{
     margin: -2.5rem 0rem 0rem 5rem;
 }
+
+@media(max-width:750px) {
+    .RowBlock1{    
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    
+    .RowBlock2{
+        margin: -1.875rem 0rem 0rem 1.875rem;
+    }
+    
+    .RowBlock3{
+        margin: -1.875rem 0rem 0rem 3.75rem;
+    }
+}

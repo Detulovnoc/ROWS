@@ -121,7 +121,7 @@ class GameManager extends Component {
                         {this.rowBoard[16].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 1) + 'rem'}} className = {styles.Column16} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column17}>
-                        {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 1) + 'rem'}} className = {styles.Column17} type={gridBlock} />})}
+                        {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 1) + 'rem'}} className = {styles.Column1} type={gridBlock} />})}
                     </div>                  
                 </main>
                 <p className={styles.Fullsize}>Score: {this.state.score}</p>

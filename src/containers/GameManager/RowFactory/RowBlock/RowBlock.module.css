@@ -26,3 +26,34 @@
     width:2.5rem;
     height:2.5rem;
 }
+
+@media(max-width:750px) {
+    .Diamond{
+        background: url('RowBlockDiamond.png') round;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+    
+    .Emerald{
+        background: url('RowBlockEmerald.png') round;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+    
+    .Ruby{
+        background: url('RowBlockRuby.png') round;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+    
+    .Sapphire{
+        background: url('RowBlockSapphire.png') round;
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+    
+    .Empty{
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+}
