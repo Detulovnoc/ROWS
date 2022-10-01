@@ -7,10 +7,12 @@ As the player's score increases, the game "level" will also increase, along with
 The game is over when no new rows can be generated.  Since rows are generated randomly from the two top corners of the grid, this happens when both corners are obstructed.
 
 #SETUP
+
 ROWS is a Javascript game using ReactJS and React Native.
 (install steps forthcoming)
 
 #Hacktoberfest
+
 I've submitted this repo for Hacktoberfest 2022, which I've never participated in before.
 I don't expect much participation, nor am I sure what I want/expect people to work on, but I will provide a breakdown of what I'm currently working on and looking to improve:
 - Expanded window support: This includes use of media queries to control the size of the grid and other graphical elements so they are visible on smaller screens.
