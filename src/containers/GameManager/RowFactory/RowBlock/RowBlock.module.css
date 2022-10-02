@@ -1,59 +1,92 @@
-.Diamond{
-    background: url('RowBlockDiamond.png') round;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.Emerald{
-    background: url('RowBlockEmerald.png') round;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.Ruby{
-    background: url('RowBlockRuby.png') round;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.Sapphire{
-    background: url('RowBlockSapphire.png') round;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.Empty{
-    width:2.5rem;
-    height:2.5rem;
-}
-
-@media(max-width:750px) {
+@media(min-width: 250px) {
     .Diamond{
         background: url('RowBlockDiamond.png') round;
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 12.5px;
+        height: 12.5px;
     }
     
     .Emerald{
         background: url('RowBlockEmerald.png') round;
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 12.5px;
+        height: 12.5px;
     }
     
     .Ruby{
         background: url('RowBlockRuby.png') round;
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 12.5px;
+        height: 12.5px;
     }
     
     .Sapphire{
         background: url('RowBlockSapphire.png') round;
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 12.5px;
+        height: 12.5px;
     }
     
     .Empty{
-        width: 1.875rem;
-        height: 1.875rem;
+        width: 12.5px;
+        height: 12.5px;
+    }
+}
+
+@media(min-width: 500px) {
+    .Diamond{
+        background: url('RowBlockDiamond.png') round;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .Emerald{
+        background: url('RowBlockEmerald.png') round;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .Ruby{
+        background: url('RowBlockRuby.png') round;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .Sapphire{
+        background: url('RowBlockSapphire.png') round;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .Empty{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media(min-width: 1000px) {
+    .Diamond{
+        background: url('RowBlockDiamond.png') round;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Emerald{
+        background: url('RowBlockEmerald.png') round;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Ruby{
+        background: url('RowBlockRuby.png') round;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Sapphire{
+        background: url('RowBlockSapphire.png') round;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Empty{
+        width: 50px;
+        height: 50px;
     }
 }

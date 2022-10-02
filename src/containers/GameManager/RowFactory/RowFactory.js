@@ -9,16 +9,48 @@ class RowFactory extends Component {
     
     render() {
 
-        let left = (this.props.leftPos * 2.5) + 'rem';
-        let top = (this.props.topPos * 2.5) + 'rem';
-
-        // let left = window.innerWidth <= 750 ? (this.props.leftPos * 1.875) + 'rem' : (this.props.leftPos * 2.5) + 'rem';
-        // let top = window.innerWidth <= 750 ? (this.props.topPos * 1.875) + 'rem' : (this.props.topPos * 2.5) + 'rem';
-
-        if (window.innerWidth <= 750) {
-            left = (this.props.leftPos * 1.875) + 'rem';
-            top = (this.props.topPos * 1.875) + 'rem';            
+        let left = (this.props.leftPos * 1) + 'px';
+        let top = (this.props.topPos * 1) + 'px';
+        // if (window.innerWidth >= 1000) {
+        //     left = (this.props.leftPos * 50) + 'px';
+        //     top = (this.props.topPos * 50) + 'px';            
+        // }
+        // else if (window.innerWidth >= 500) {
+        //     left = (this.props.leftPos * 25) + 'px';
+        //     top = (this.props.topPos * 25) + 'px';            
+        // }
+        // else if (window.innerWidth >= 250) {
+        //     left = (this.props.leftPos * 12.5) + 'px';
+        //     top = (this.props.topPos * 12.5) + 'px';            
+        // }  
+        if (screen.width >= 1000) {
+            left = (this.props.leftPos * 50) + 'px';
+            top = (this.props.topPos * 50) + 'px';            
         }
+        else if (screen.width >= 500) {
+            left = (this.props.leftPos * 25) + 'px';
+            top = (this.props.topPos * 25) + 'px';            
+        }
+        else if (screen.width >= 250) {
+            left = (this.props.leftPos * 12.5) + 'px';
+            top = (this.props.topPos * 12.5) + 'px';            
+        }       
+        // let lgWindow = window.matchMedia('min-width: 1000px');
+        // let mdWindow = window.matchMedia('min-width: 500px');
+        // let smWindow = window.matchMedia('min-width: 250px');
+
+        // if (lgWindow.matches) {
+        //     left = (this.props.leftPos * 50) + 'px';
+        //     top = (this.props.topPos * 50) + 'px';            
+        // }
+        // else if (mdWindow.matches) {
+        //     left = (this.props.leftPos * 25) + 'px';
+        //     top = (this.props.topPos * 25) + 'px';            
+        // }
+        // else if (smWindow.matches) {
+        //     left = (this.props.leftPos * 12.5) + 'px';
+        //     top = (this.props.topPos * 12.5) + 'px';            
+        // }
 
         const activeObject = 
         <Aux>
@@ -37,6 +69,7 @@ class RowFactory extends Component {
 
         return activeObject;
     }
+    
 
 };
 

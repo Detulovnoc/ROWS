@@ -1,262 +1,372 @@
 .Fullsize {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 4rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px;
 }
 
 .Midsize {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12.5px;
 }
 
-.NextRowWindow {
-    background: url('NextRowGrid.png') round;
-    width: 7.5rem;
-    height: 2.5rem;
-    margin: auto;
-}
-
-.NextBlock1 {
-    margin-left: 0rem;
-}
-
-.NextBlock2 {
-    margin-left: 2.5rem;
-    margin-top: -2.5rem;
-}
-
-.NextBlock3 {
-    margin-left: 5rem;
-    margin-top: -2.5rem;
-}
-
-.Grid {
-    background: url('PlacementGrid.png') round;
-    width: 45rem;
-    height: 22.5rem;
-    margin: auto;
-}
-
-.Column0 {    
-    margin-left: 0rem;
-    margin-top: -2.5rem;
-}
-
-.Column1 {    
-    margin-left: 2.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column2 {    
-    margin-left: 5rem;
-    margin-top: -22.5rem;
-}
-
-.Column3 {    
-    margin-left: 7.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column4 {    
-    margin-left: 10rem;
-    margin-top: -22.5rem;
-}
-
-.Column5 {    
-    margin-left: 12.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column6 {    
-    margin-left: 15rem;
-    margin-top: -22.5rem;
-}
-
-.Column7 {    
-    margin-left: 17.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column8 {    
-    margin-left: 20rem;
-    margin-top: -22.5rem;
-}
-
-.Column9 {    
-    margin-left: 22.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column10 {    
-    margin-left: 25rem;
-    margin-top: -22.5rem;
-}
-
-.Column11 {    
-    margin-left: 27.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column12 {    
-    margin-left: 30rem;
-    margin-top: -22.5rem;
-}
-
-.Column13 {    
-    margin-left: 32.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column14 {    
-    margin-left: 35rem;
-    margin-top: -22.5rem;
-}
-
-.Column15 {    
-    margin-left: 37.5rem;
-    margin-top: -22.5rem;
-}
-
-.Column16 {    
-    margin-left: 40rem;
-    margin-top: -22.5rem;
-}
-
-.Column17 {    
-    margin-left: 42.5rem;
-    margin-top: -22.5rem;
-}
-
-@media (max-width: 750px) {
-    .Fullsize {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        font-size: 3rem;
-    }
-    
-    .Midsize {
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
-        font-size: 1.5rem;
-    }
+@media (min-width: 250px) {
     
     .NextRowWindow {
         background: url('NextRowGrid.png') round;
-        width: 5.625rem;
-        height: 1.875rem;
+        width: 37.5px;
+        height: 12.5px;
         margin: auto;
     }
     
     .NextBlock1 {
-        margin-left: 0rem;
+        margin-left: 0px;
     }
     
     .NextBlock2 {
-        margin-left: 1.875rem;
-        margin-top: -1.875rem;
+        margin-left: 12.5px;
+        margin-top: -12.5px;
     }
     
     .NextBlock3 {
-        margin-left: 3.75rem;
-        margin-top: -1.875rem;
+        margin-left: 25px;
+        margin-top: -12.5px;
     }
     
     .Grid {
         background: url('PlacementGrid.png') round;
-        width: 33.75rem;
-        height: 16.875rem;
+        width: 225px;
+        height: 112.5px;
         margin: auto;
     }
     
     .Column0 {    
-        margin-left: 0rem;
-        margin-top: -1.875rem;
+        margin-left: 0px;
+        margin-top: -12.5px;
     }
     
     .Column1 {    
-        margin-left: 1.875rem;
-        margin-top: -16.875rem;
+        margin-left: 12.5px;
+        margin-top: -112.5px;
     }
     
     .Column2 {    
-        margin-left: 3.75rem;
-        margin-top: -16.875rem;
+        margin-left: 25px;
+        margin-top: -112.5px;
     }
     
     .Column3 {    
-        margin-left: 5.625rem;
-        margin-top: -16.875rem;
+        margin-left: 37.5px;
+        margin-top: -112.5px;
     }
     
     .Column4 {    
-        margin-left: 7.5rem;
-        margin-top: -16.875rem;
+        margin-left: 50px;
+        margin-top: -112.5px;
     }
     
     .Column5 {    
-        margin-left: 9.375rem;
-        margin-top: -16.875rem;
+        margin-left: 62.5px;
+        margin-top: -112.5px;
     }
     
     .Column6 {    
-        margin-left: 11.25rem;
-        margin-top: -16.875rem;
+        margin-left: 75px;
+        margin-top: -112.5px;
     }
     
     .Column7 {    
-        margin-left: 13.125rem;
-        margin-top: -16.875rem;
+        margin-left: 87.5px;
+        margin-top: -112.5px;
     }
     
     .Column8 {    
-        margin-left: 15rem;
-        margin-top: -16.875rem;
+        margin-left: 100px;
+        margin-top: -112.5px;
     }
     
     .Column9 {    
-        margin-left: 16.875rem;
-        margin-top: -16.875rem;
+        margin-left: 112.5px;
+        margin-top: -112.5px;
     }
     
     .Column10 {    
-        margin-left: 18.75rem;
-        margin-top: -16.875rem;
+        margin-left: 125px;
+        margin-top: -112.5px;
     }
     
     .Column11 {    
-        margin-left: 20.625rem;
-        margin-top: -16.875rem;
+        margin-left: 137.5px;
+        margin-top: -112.5px;
     }
     
     .Column12 {    
-        margin-left: 22.5rem;
-        margin-top: -16.875rem;
+        margin-left: 150px;
+        margin-top: -112.5px;
     }
     
     .Column13 {    
-        margin-left: 24.375rem;
-        margin-top: -16.875rem;
+        margin-left: 167.5px;
+        margin-top: -112.5px;
     }
     
     .Column14 {    
-        margin-left: 26.25rem;
-        margin-top: -16.875rem;
+        margin-left: 175px;
+        margin-top: -112.5px;
     }
     
     .Column15 {    
-        margin-left: 28.125rem;
-        margin-top: -16.875rem;
+        margin-left: 187.5px;
+        margin-top: -112.5px;
     }
     
     .Column16 {    
-        margin-left: 30rem;
-        margin-top: -16.875rem;
+        margin-left: 200px;
+        margin-top: -112.5px;
     }
     
     .Column17 {    
-        margin-left: 31.875rem;
-        margin-top: -16.875rem;
+        margin-left: 212.5px;
+        margin-top: -112.5px;
     }
 }
 
+@media(min-width:500px) {
+    .NextRowWindow {
+        background: url('NextRowGrid.png') round;
+        width: 75px;
+        height: 25px;
+        margin: auto;
+    }
+    
+    .NextBlock1 {
+        margin-left: 0px;
+    }
+    
+    .NextBlock2 {
+        margin-left: 25px;
+        margin-top: -25px;
+    }
+    
+    .NextBlock3 {
+        margin-left: 50px;
+        margin-top: -25px;
+    }
+    
+    .Grid {
+        background: url('PlacementGrid.png') round;
+        width: 450px;
+        height: 225px;
+        margin: auto;
+    }
+    
+    .Column0 {    
+        margin-left: 0px;
+        margin-top: -25px;
+    }
+    
+    .Column1 {    
+        margin-left: 25px;
+        margin-top: -225px;
+    }
+    
+    .Column2 {    
+        margin-left: 50px;
+        margin-top: -225px;
+    }
+    
+    .Column3 {    
+        margin-left: 75px;
+        margin-top: -225px;
+    }
+    
+    .Column4 {    
+        margin-left: 100px;
+        margin-top: -225px;
+    }
+    
+    .Column5 {    
+        margin-left: 125px;
+        margin-top: -225px;
+    }
+    
+    .Column6 {    
+        margin-left: 150px;
+        margin-top: -225px;
+    }
+    
+    .Column7 {    
+        margin-left: 175px;
+        margin-top: -225px;
+    }
+    
+    .Column8 {    
+        margin-left: 200px;
+        margin-top: -225px;
+    }
+    
+    .Column9 {    
+        margin-left: 225px;
+        margin-top: -225px;
+    }
+    
+    .Column10 {    
+        margin-left: 250px;
+        margin-top: -225px;
+    }
+    
+    .Column11 {    
+        margin-left: 275px;
+        margin-top: -225px;
+    }
+    
+    .Column12 {    
+        margin-left: 300px;
+        margin-top: -225px;
+    }
+    
+    .Column13 {    
+        margin-left: 325px;
+        margin-top: -225px;
+    }
+    
+    .Column14 {    
+        margin-left: 350px;
+        margin-top: -225px;
+    }
+    
+    .Column15 {    
+        margin-left: 375px;
+        margin-top: -225px;
+    }
+    
+    .Column16 {    
+        margin-left: 400px;
+        margin-top: -225px;
+    }
+    
+    .Column17 {    
+        margin-left: 425px;
+        margin-top: -225px;
+    }
+}
+
+@media(min-width:1000px) {  
+    .NextRowWindow {
+        background: url('NextRowGrid.png') round;
+        width: 150px;
+        height: 50px;
+        margin: auto;
+    }
+    
+    .NextBlock1 {
+        margin-left: 0px;
+    }
+    
+    .NextBlock2 {
+        margin-left: 50px;
+        margin-top: -50px;
+    }
+    
+    .NextBlock3 {
+        margin-left: 100px;
+        margin-top: -50px;
+    }
+    
+    .Grid {
+        background: url('PlacementGrid.png') round;
+        width: 900px;
+        height: 450px;
+        margin: auto;
+    }
+    
+    .Column0 {    
+        margin-left: 0px;
+        margin-top: -50px;
+    }
+    
+    .Column1 {    
+        margin-left: 50px;
+        margin-top: -450px;
+    }
+    
+    .Column2 {    
+        margin-left: 100px;
+        margin-top: -450px;
+    }
+    
+    .Column3 {    
+        margin-left: 150px;
+        margin-top: -450px;
+    }
+    
+    .Column4 {    
+        margin-left: 200px;
+        margin-top: -450px;
+    }
+    
+    .Column5 {    
+        margin-left: 250px;
+        margin-top: -450px;
+    }
+    
+    .Column6 {    
+        margin-left: 300px;
+        margin-top: -450px;
+    }
+    
+    .Column7 {    
+        margin-left: 350px;
+        margin-top: -450px;
+    }
+    
+    .Column8 {    
+        margin-left: 400px;
+        margin-top: -450px;
+    }
+    
+    .Column9 {    
+        margin-left: 450px;
+        margin-top: -450px;
+    }
+    
+    .Column10 {    
+        margin-left: 500px;
+        margin-top: -450px;
+    }
+    
+    .Column11 {    
+        margin-left: 550px;
+        margin-top: -450px;
+    }
+    
+    .Column12 {    
+        margin-left: 600px;
+        margin-top: -450px;
+    }
+    
+    .Column13 {    
+        margin-left: 650px;
+        margin-top: -450px;
+    }
+    
+    .Column14 {    
+        margin-left: 700px;
+        margin-top: -450px;
+    }
+    
+    .Column15 {    
+        margin-left: 750px;
+        margin-top: -450px;
+    }
+    
+    .Column16 {    
+        margin-left: 800px;
+        margin-top: -450px;
+    }
+    
+    .Column17 {    
+        margin-left: 850px;
+        margin-top: -450px;
+    }
+}
