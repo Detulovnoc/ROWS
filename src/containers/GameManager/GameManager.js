@@ -44,7 +44,7 @@ class GameManager extends Component {
                     <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
                     <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p> 
                     <p className={styles.Midsize}>Shift the gems in the active row with w key.</p> 
-                    <p className={styles.Midsize}>The active row can also be moved via swiping and shifted via tapping.</p> 
+                    {/* <p className={styles.Midsize}>The active row can also be moved via swiping and shifted via tapping.</p>  */}
                     <p className={styles.Midsize}>The game is over when both top corners are blocked.</p> 
                     <p className={styles.Fullsize}>Click background to Start</p>
                 </Modal>                
@@ -124,8 +124,7 @@ class GameManager extends Component {
                         {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column17} type={gridBlock} />})}
                     </div>                  
                 </main>
-                <p className={styles.Fullsize}>Score: {this.state.score}</p>
-                <p className={styles.Midsize}>Level: {this.state.level}</p>                
+                <p className={styles.Fullsize}>Score: {this.state.score} Level: {this.state.level}</p>         
                 <p className={styles.Fullsize}>{this.state.gameOver ? "Game Over" : ""}</p>
             </Aux>
         );
@@ -727,7 +726,7 @@ class GameManager extends Component {
     }
 
     startTouch = () => {
-        window.onmousedown = null;
+        // window.onmousedown = null;
         // once we have a touch started, then we look for movement or just a tap
         window.ontouchmove = this.moveTouch;
         window.ontouchend = this.endTouchTap;
@@ -739,12 +738,22 @@ class GameManager extends Component {
         window.ontouchend = this.endTouchMove;
     }
 
-    endTouchTap = () => {
-        window.onmouseup = null;
+    endTouchTap = (event) => {
+        // window.onmouseup = null;
         // we know a tap has ended, and we know that there was no motion, so now we rotate the blocks
         window.ontouchmove = null;
         window.ontouchend = null;
-        this.rotateBlock();
+        let horzTouch = event.touches[0].clientX;
+        let vertTouch = event.touches[0].clientY;
+        if(vertTouch <= (screen.height / 2)) {
+            this.rotateBlock();
+        }
+        else if (horzTouch <= (screen.width / 2)) {
+            this.moveBlockLeft();
+        }
+        else if (horzTouch >= (screen.width / 2)) {
+            this.moveBlockRight();
+        }
     }
 
     endTouchMove = (event) => {

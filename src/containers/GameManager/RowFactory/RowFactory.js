@@ -11,18 +11,6 @@ class RowFactory extends Component {
 
         let left = (this.props.leftPos * 1) + 'px';
         let top = (this.props.topPos * 1) + 'px';
-        // if (window.innerWidth >= 1000) {
-        //     left = (this.props.leftPos * 50) + 'px';
-        //     top = (this.props.topPos * 50) + 'px';            
-        // }
-        // else if (window.innerWidth >= 500) {
-        //     left = (this.props.leftPos * 25) + 'px';
-        //     top = (this.props.topPos * 25) + 'px';            
-        // }
-        // else if (window.innerWidth >= 250) {
-        //     left = (this.props.leftPos * 12.5) + 'px';
-        //     top = (this.props.topPos * 12.5) + 'px';            
-        // }  
         if (screen.width >= 1000) {
             left = (this.props.leftPos * 50) + 'px';
             top = (this.props.topPos * 50) + 'px';            
@@ -35,22 +23,6 @@ class RowFactory extends Component {
             left = (this.props.leftPos * 12.5) + 'px';
             top = (this.props.topPos * 12.5) + 'px';            
         }       
-        // let lgWindow = window.matchMedia('min-width: 1000px');
-        // let mdWindow = window.matchMedia('min-width: 500px');
-        // let smWindow = window.matchMedia('min-width: 250px');
-
-        // if (lgWindow.matches) {
-        //     left = (this.props.leftPos * 50) + 'px';
-        //     top = (this.props.topPos * 50) + 'px';            
-        // }
-        // else if (mdWindow.matches) {
-        //     left = (this.props.leftPos * 25) + 'px';
-        //     top = (this.props.topPos * 25) + 'px';            
-        // }
-        // else if (smWindow.matches) {
-        //     left = (this.props.leftPos * 12.5) + 'px';
-        //     top = (this.props.topPos * 12.5) + 'px';            
-        // }
 
         const activeObject = 
         <Aux>
