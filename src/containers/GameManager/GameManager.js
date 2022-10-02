@@ -728,23 +728,14 @@ class GameManager extends Component {
     startTouch = () => {
         // window.onmousedown = null;
         // once we have a touch started, then we look for movement or just a tap
-        window.ontouchmove = this.moveTouch;
-        window.ontouchend = this.endTouchTap;
+        window.ontouchend = this.endTouch;
     }
 
-    moveTouch = () => {
-        window.onmousemove = null;
-        // once we know our touch is moving, we specify a different end function for the tap motion 
-        window.ontouchend = this.endTouchMove;
-    }
-
-    endTouchTap = (event) => {
+    endTouch = (event) => {
         // window.onmouseup = null;
         // we know a tap has ended, and we know that there was no motion, so now we rotate the blocks
-        window.ontouchmove = null;
-        window.ontouchend = null;
-        let horzTouch = event.touches[0].clientX;
-        let vertTouch = event.touches[0].clientY;
+        let horzTouch = event.changedTouches[0].screenX;
+        let vertTouch = event.changedTtouches[0].screenY;
         if(vertTouch <= (screen.height / 2)) {
             this.rotateBlock();
         }
@@ -754,27 +745,7 @@ class GameManager extends Component {
         else if (horzTouch >= (screen.width / 2)) {
             this.moveBlockRight();
         }
-    }
-
-    endTouchMove = (event) => {
-        window.onmouseup = null;
-        // we know a tap has ended, and we know that there was a motion, so now we figure out the direction to move the blocks
-        window.ontouchmove = null;
-        window.ontouchend = null;
-
-        var horzDir = event.touches[0].clientX - event.changedTouches[0].clientX;
-        if (horzDir > 0) {
-            // greater than 0 - move right
-            this.rightMove();
-        }
-        else if (horzDir < 0) {
-            // less than 0 - move left
-            this.leftMove();
-        }
-        else {
-            // no left/right motion - move down
-            this.downMove();
-        }
+        this.rotateBlock();
     }
 
     startGame = () => {
