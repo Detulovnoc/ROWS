@@ -124,8 +124,7 @@ class GameManager extends Component {
                         {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column17} type={gridBlock} />})}
                     </div>                  
                 </main>
-                <p className={styles.Fullsize}>Score: {this.state.score} Level: {this.state.level}</p>         
-                <p className={styles.Fullsize}>{this.state.gameOver ? "Game Over" : ""}</p>
+                <p className={styles.Fullsize}>Score: {this.state.score} {this.state.gameOver ? "Game Over" : ""} Level: {this.state.level}</p>
             </Aux>
         );
     }
