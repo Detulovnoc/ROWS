@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import RowFactory from '../../containers/GameManager/RowFactory/RowFactory'
 import RowBlock from '../../containers/GameManager/RowFactory/RowBlock/RowBlock'
+import RowBlockSmall from '../../containers/GameManager/RowFactory/RowBlock/RowBlockSmall'
 import Aux from '../../hoc/_Aux'
 import StartModal from '../../components/StartModal/StartModal';
 import ButtonsModal from '../../components/ButtonsModal/ButtonsModal';
@@ -54,19 +55,18 @@ class GameManager extends Component {
                     <button className={styles.DownButton} onClick={this.moveBlockLeft}>LEFT</button>
                     <button className={styles.DownButton} onClick={this.moveBlockDown}>DOWN</button>
                     <button className={styles.DownButton} onClick={this.moveBlockRight}>RIGHT</button>
-                </ButtonsModal>                
+                </ButtonsModal>        
                 <main className = {styles.NextRowWindow}>
                     <div className = {styles.NextBlock1}>
-                        <RowBlock type={this.state.nextBlock1}/>
+                        <RowBlockSmall type={this.state.nextBlock1}/>
                     </div>
                     <div className = {styles.NextBlock2}>
-                        <RowBlock type={this.state.nextBlock2}/>
+                        <RowBlockSmall type={this.state.nextBlock2}/>
                     </div>
                     <div className = {styles.NextBlock3}>
-                        <RowBlock type={this.state.nextBlock3}/>
+                        <RowBlockSmall type={this.state.nextBlock3}/>
                     </div>
-                </main>
-                <p className={styles.Midsize}>Next Row</p>
+                </main>   
                 <main className={styles.Grid}>
                     <RowFactory 
                         leftPos={this.state.rowObjHorz}
@@ -77,61 +77,61 @@ class GameManager extends Component {
                         block3={this.state.rowObjBlock3}
                      /> 
                     <div className = {styles.Column0}>
-                        {this.rowBoard[0].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column0} type={gridBlock} />})}
+                        {this.rowBoard[0].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column0} type={gridBlock} />})}
                     </div>
                     <div className = {styles.Column1}>
-                        {this.rowBoard[1].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column1} type={gridBlock} />})}
+                        {this.rowBoard[1].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column1} type={gridBlock} />})}
                     </div>  
                     <div className = {styles.Column2}>
-                        {this.rowBoard[2].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column2} type={gridBlock} />})}
+                        {this.rowBoard[2].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column2} type={gridBlock} />})}
                     </div>
                     <div className = {styles.Column3}>
-                        {this.rowBoard[3].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column3} type={gridBlock} />})}
+                        {this.rowBoard[3].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column3} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column4}>
-                        {this.rowBoard[4].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column4} type={gridBlock} />})}
+                        {this.rowBoard[4].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column4} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column5}>
-                        {this.rowBoard[5].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column5} type={gridBlock} />})}
+                        {this.rowBoard[5].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column5} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column6}>
-                        {this.rowBoard[6].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column6} type={gridBlock} />})}
+                        {this.rowBoard[6].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column6} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column7}>
-                        {this.rowBoard[7].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column7} type={gridBlock} />})}
+                        {this.rowBoard[7].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column7} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column8}>
-                        {this.rowBoard[8].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column8} type={gridBlock} />})}
+                        {this.rowBoard[8].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column8} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column9}>
-                        {this.rowBoard[9].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column9} type={gridBlock} />})}
+                        {this.rowBoard[9].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column9} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column10}>
-                        {this.rowBoard[10].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column10} type={gridBlock} />})}
+                        {this.rowBoard[10].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column10} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column11}>
-                        {this.rowBoard[11].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column11} type={gridBlock} />})}
+                        {this.rowBoard[11].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column11} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column12}>
-                        {this.rowBoard[12].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column12} type={gridBlock} />})}
+                        {this.rowBoard[12].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column12} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column13}>
-                        {this.rowBoard[13].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column13} type={gridBlock} />})}
+                        {this.rowBoard[13].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column13} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column14}>
-                        {this.rowBoard[14].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column14} type={gridBlock} />})}
+                        {this.rowBoard[14].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column14} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column15}>
-                        {this.rowBoard[15].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column15} type={gridBlock} />})}
+                        {this.rowBoard[15].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column15} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column16}>
-                        {this.rowBoard[16].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column16} type={gridBlock} />})}
+                        {this.rowBoard[16].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column16} type={gridBlock} />})}
                     </div> 
                     <div className = {styles.Column17}>
-                        {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index) + 'px'}} className = {styles.Column17} type={gridBlock} />})}
+                        {this.rowBoard[17].map( (gridBlock, index) => { return <RowBlock key={index} style={{top: (index * 5) + 'vw'}} className = {styles.Column17} type={gridBlock} />})}
                     </div>                  
-                </main>
-                <p className={styles.Fullsize}>Score: {this.state.score} {this.state.gameOver ? "Game Over" : ""} Level: {this.state.level}</p>
+                </main>         
+                <p className={styles.Midsize}>Score: {this.state.score} {this.state.gameOver ? "Game Over" : ""} Level: {this.state.level}</p>
             </Aux>
         );
     }

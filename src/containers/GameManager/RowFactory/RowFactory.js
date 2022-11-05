@@ -9,20 +9,23 @@ class RowFactory extends Component {
     
     render() {
 
-        let left = (this.props.leftPos * 1) + 'px';
-        let top = (this.props.topPos * 1) + 'px';
-        if (screen.width >= 1000) {
-            left = (this.props.leftPos * 50) + 'px';
-            top = (this.props.topPos * 50) + 'px';            
-        }
-        else if (screen.width >= 500) {
-            left = (this.props.leftPos * 25) + 'px';
-            top = (this.props.topPos * 25) + 'px';            
-        }
-        else if (screen.width >= 250) {
-            left = (this.props.leftPos * 12.5) + 'px';
-            top = (this.props.topPos * 12.5) + 'px';            
-        }       
+        // let left = (this.props.leftPos * 1) + 'px';
+        // let top = (this.props.topPos * 1) + 'px';
+        // if (screen.width >= 1000) {
+        //     left = (this.props.leftPos * 50) + 'px';
+        //     top = (this.props.topPos * 50) + 'px';            
+        // }
+        // else if (screen.width >= 500) {
+        //     left = (this.props.leftPos * 25) + 'px';
+        //     top = (this.props.topPos * 25) + 'px';            
+        // }
+        // else if (screen.width >= 250) {
+        //     left = (this.props.leftPos * 12.5) + 'px';
+        //     top = (this.props.topPos * 12.5) + 'px';            
+        // }       
+        
+        let left = (this.props.leftPos * 5) + 'vw';
+        let top = (this.props.topPos * 5) + 'vw';
 
         const activeObject = 
         <Aux>
