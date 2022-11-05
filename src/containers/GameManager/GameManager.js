@@ -44,7 +44,7 @@ class GameManager extends Component {
                     <p className={styles.Midsize}>Use the active row to match gems and achieve a high score!</p> 
                     <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
                     <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p>
-                    <p className={styles.Midsize}>The active row can also be moved left and right by clicking the bottom corners of the screen.</p> 
+                    <p className={styles.Midsize}>The active row can also be moved by touching/clicking the corresponding bottom sections of the screen.</p> 
                     <p className={styles.Midsize}>Shift the gems in the active row with w key, or click the top half of the screen.</p>  
                     <p className={styles.Midsize}>The game is over when both top corners are blocked.</p> 
                     <p className={styles.Fullsize}>Click background to Start</p>
