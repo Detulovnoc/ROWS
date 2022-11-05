@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import RowFactory from '../../containers/GameManager/RowFactory/RowFactory'
 import RowBlock from '../../containers/GameManager/RowFactory/RowBlock/RowBlock'
 import Aux from '../../hoc/_Aux'
-import Modal from '../../components/Modal/Modal';
+import StartModal from '../../components/StartModal/StartModal';
+import ButtonsModal from '../../components/ButtonsModal/ButtonsModal';
 import {pluck, LEFT, RIGHT, DOWN, STOP} from '../../hoc/utils'
 // import EStyleSheet from 'react-native-extended-stylesheet';
 import styles from './GameManager.module.css'
@@ -37,17 +38,23 @@ class GameManager extends Component {
 
         return (
             <Aux>
-                <Modal show={this.state.gameOver} modalClosed={this.startGame}>
+                <StartModal show={this.state.gameOver} StartModalClosed={this.startGame}>
                     <p className={styles.Fullsize}>ROWS</p>
                     <p className={styles.Midsize}>How To Play:</p>
                     <p className={styles.Midsize}>Use the active row to match gems and achieve a high score!</p> 
                     <p className={styles.Midsize}>Three or more gems can be matched in any direction.</p> 
-                    <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p> 
-                    <p className={styles.Midsize}>Shift the gems in the active row with w key.</p> 
-                    {/* <p className={styles.Midsize}>The active row can also be moved via swiping and shifted via tapping.</p>  */}
+                    <p className={styles.Midsize}>Move the active row left, down, or right with a, s, and d keys.</p>
+                    <p className={styles.Midsize}>The active row can also be moved by touching/clicking the corresponding bottom sections of the screen.</p> 
+                    <p className={styles.Midsize}>Shift the gems in the active row with w key, or click the top half of the screen.</p>  
                     <p className={styles.Midsize}>The game is over when both top corners are blocked.</p> 
                     <p className={styles.Fullsize}>Click background to Start</p>
-                </Modal>                
+                </StartModal>
+                <ButtonsModal show={!this.state.gameOver}>
+                    <button className={styles.RotateButton} onClick={this.rotateBlock}>ROTATE</button>
+                    <button className={styles.DownButton} onClick={this.moveBlockLeft}>LEFT</button>
+                    <button className={styles.DownButton} onClick={this.moveBlockDown}>DOWN</button>
+                    <button className={styles.DownButton} onClick={this.moveBlockRight}>RIGHT</button>
+                </ButtonsModal>                
                 <main className = {styles.NextRowWindow}>
                     <div className = {styles.NextBlock1}>
                         <RowBlock type={this.state.nextBlock1}/>

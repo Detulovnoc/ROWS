@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
-import styles from './Modal.module.css';
+import styles from './StartModal.module.css';
 import Aux from '../../hoc/_Aux'
 import Backdrop from '../Backdrop/Backdrop';
 
 
-class Modal extends Component {
+class StartModal extends Component {
 
     shouldComponentUpdate ( nextProps, nextState ) {
         return nextProps.show !== this.props.show;
     }
 
     componentWillUpdate () {
-        console.log('[Modal] WillUpdate');
+        console.log('[StartModal] WillUpdate');
     }
 
     render () {
         return (
             <Aux>
-                <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
+                <Backdrop show={this.props.show} clicked={this.props.StartModalClosed} />
                 <div
-                    className={styles.Modal}
+                    className={styles.StartModal}
                     style={{
                         transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)',
                         opacity: this.props.show ? '1' : '0'
@@ -31,4 +31,4 @@ class Modal extends Component {
     }
 }
 
-export default Modal;
+export default StartModal;

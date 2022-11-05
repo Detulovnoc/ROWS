@@ -10,6 +10,22 @@
     font-size: 12.5px;
 }
 
+.RotateButton {
+    color: transparent;
+    background: transparent;
+    font-size: 40vh;
+    width: 100%;
+    border-style: none;    
+}
+
+.DownButton {
+    color: transparent;
+    background: transparent;
+    font-size: 60vh;
+    width: 33%;
+    border-style: none;
+}
+
 @media (min-width: 250px) {
     
     .NextRowWindow {
