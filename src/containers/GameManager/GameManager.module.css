@@ -1,13 +1,13 @@
 .Fullsize {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 25px;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    font-size: 5vw;
 }
 
 .Midsize {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 12.5px;
+    margin-top: 0.125vw;
+    margin-bottom: 0.125vw;
+    font-size: 1.75vw;
 }
 
 .RotateButton {
@@ -26,363 +26,120 @@
     border-style: none;
 }
 
-@media (min-width: 250px) {
-    
-    .NextRowWindow {
-        background: url('NextRowGrid.png') round;
-        width: 37.5px;
-        height: 12.5px;
-        margin: auto;
-    }
-    
-    .NextBlock1 {
-        margin-left: 0px;
-    }
-    
-    .NextBlock2 {
-        margin-left: 12.5px;
-        margin-top: -12.5px;
-    }
-    
-    .NextBlock3 {
-        margin-left: 25px;
-        margin-top: -12.5px;
-    }
-    
-    .Grid {
-        background: url('PlacementGrid.png') round;
-        width: 225px;
-        height: 112.5px;
-        margin: auto;
-    }
-    
-    .Column0 {    
-        margin-left: 0px;
-        margin-top: -12.5px;
-    }
-    
-    .Column1 {    
-        margin-left: 12.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column2 {    
-        margin-left: 25px;
-        margin-top: -112.5px;
-    }
-    
-    .Column3 {    
-        margin-left: 37.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column4 {    
-        margin-left: 50px;
-        margin-top: -112.5px;
-    }
-    
-    .Column5 {    
-        margin-left: 62.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column6 {    
-        margin-left: 75px;
-        margin-top: -112.5px;
-    }
-    
-    .Column7 {    
-        margin-left: 87.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column8 {    
-        margin-left: 100px;
-        margin-top: -112.5px;
-    }
-    
-    .Column9 {    
-        margin-left: 112.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column10 {    
-        margin-left: 125px;
-        margin-top: -112.5px;
-    }
-    
-    .Column11 {    
-        margin-left: 137.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column12 {    
-        margin-left: 150px;
-        margin-top: -112.5px;
-    }
-    
-    .Column13 {    
-        margin-left: 167.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column14 {    
-        margin-left: 175px;
-        margin-top: -112.5px;
-    }
-    
-    .Column15 {    
-        margin-left: 187.5px;
-        margin-top: -112.5px;
-    }
-    
-    .Column16 {    
-        margin-left: 200px;
-        margin-top: -112.5px;
-    }
-    
-    .Column17 {    
-        margin-left: 212.5px;
-        margin-top: -112.5px;
-    }
+.NextRowWindow {
+    background: url('NextRowGrid.png') round;
+    width: 7.5vw;
+    height: 2.5vw;
+    margin: auto;
 }
 
-@media(min-width:500px) {
-    .NextRowWindow {
-        background: url('NextRowGrid.png') round;
-        width: 75px;
-        height: 25px;
-        margin: auto;
-    }
-    
-    .NextBlock1 {
-        margin-left: 0px;
-    }
-    
-    .NextBlock2 {
-        margin-left: 25px;
-        margin-top: -25px;
-    }
-    
-    .NextBlock3 {
-        margin-left: 50px;
-        margin-top: -25px;
-    }
-    
-    .Grid {
-        background: url('PlacementGrid.png') round;
-        width: 450px;
-        height: 225px;
-        margin: auto;
-    }
-    
-    .Column0 {    
-        margin-left: 0px;
-        margin-top: -25px;
-    }
-    
-    .Column1 {    
-        margin-left: 25px;
-        margin-top: -225px;
-    }
-    
-    .Column2 {    
-        margin-left: 50px;
-        margin-top: -225px;
-    }
-    
-    .Column3 {    
-        margin-left: 75px;
-        margin-top: -225px;
-    }
-    
-    .Column4 {    
-        margin-left: 100px;
-        margin-top: -225px;
-    }
-    
-    .Column5 {    
-        margin-left: 125px;
-        margin-top: -225px;
-    }
-    
-    .Column6 {    
-        margin-left: 150px;
-        margin-top: -225px;
-    }
-    
-    .Column7 {    
-        margin-left: 175px;
-        margin-top: -225px;
-    }
-    
-    .Column8 {    
-        margin-left: 200px;
-        margin-top: -225px;
-    }
-    
-    .Column9 {    
-        margin-left: 225px;
-        margin-top: -225px;
-    }
-    
-    .Column10 {    
-        margin-left: 250px;
-        margin-top: -225px;
-    }
-    
-    .Column11 {    
-        margin-left: 275px;
-        margin-top: -225px;
-    }
-    
-    .Column12 {    
-        margin-left: 300px;
-        margin-top: -225px;
-    }
-    
-    .Column13 {    
-        margin-left: 325px;
-        margin-top: -225px;
-    }
-    
-    .Column14 {    
-        margin-left: 350px;
-        margin-top: -225px;
-    }
-    
-    .Column15 {    
-        margin-left: 375px;
-        margin-top: -225px;
-    }
-    
-    .Column16 {    
-        margin-left: 400px;
-        margin-top: -225px;
-    }
-    
-    .Column17 {    
-        margin-left: 425px;
-        margin-top: -225px;
-    }
+.NextBlock1 {
+    margin-left: 0vw;
 }
 
-@media(min-width:1000px) {  
-    .NextRowWindow {
-        background: url('NextRowGrid.png') round;
-        width: 150px;
-        height: 50px;
-        margin: auto;
-    }
-    
-    .NextBlock1 {
-        margin-left: 0px;
-    }
-    
-    .NextBlock2 {
-        margin-left: 50px;
-        margin-top: -50px;
-    }
-    
-    .NextBlock3 {
-        margin-left: 100px;
-        margin-top: -50px;
-    }
-    
-    .Grid {
-        background: url('PlacementGrid.png') round;
-        width: 900px;
-        height: 450px;
-        margin: auto;
-    }
-    
-    .Column0 {    
-        margin-left: 0px;
-        margin-top: -50px;
-    }
-    
-    .Column1 {    
-        margin-left: 50px;
-        margin-top: -450px;
-    }
-    
-    .Column2 {    
-        margin-left: 100px;
-        margin-top: -450px;
-    }
-    
-    .Column3 {    
-        margin-left: 150px;
-        margin-top: -450px;
-    }
-    
-    .Column4 {    
-        margin-left: 200px;
-        margin-top: -450px;
-    }
-    
-    .Column5 {    
-        margin-left: 250px;
-        margin-top: -450px;
-    }
-    
-    .Column6 {    
-        margin-left: 300px;
-        margin-top: -450px;
-    }
-    
-    .Column7 {    
-        margin-left: 350px;
-        margin-top: -450px;
-    }
-    
-    .Column8 {    
-        margin-left: 400px;
-        margin-top: -450px;
-    }
-    
-    .Column9 {    
-        margin-left: 450px;
-        margin-top: -450px;
-    }
-    
-    .Column10 {    
-        margin-left: 500px;
-        margin-top: -450px;
-    }
-    
-    .Column11 {    
-        margin-left: 550px;
-        margin-top: -450px;
-    }
-    
-    .Column12 {    
-        margin-left: 600px;
-        margin-top: -450px;
-    }
-    
-    .Column13 {    
-        margin-left: 650px;
-        margin-top: -450px;
-    }
-    
-    .Column14 {    
-        margin-left: 700px;
-        margin-top: -450px;
-    }
-    
-    .Column15 {    
-        margin-left: 750px;
-        margin-top: -450px;
-    }
-    
-    .Column16 {    
-        margin-left: 800px;
-        margin-top: -450px;
-    }
-    
-    .Column17 {    
-        margin-left: 850px;
-        margin-top: -450px;
-    }
+.NextBlock2 {
+    margin-left: 2.5vw;
+    margin-top: -2.5vw;
+}
+
+.NextBlock3 {
+    margin-left: 5vw;
+    margin-top: -2.5vw;
+}
+
+.Grid {
+    background: url('PlacementGrid.png') round;
+    width: 90vw;
+    height: 45vw;
+    margin: auto;
+}
+
+.Column0 {    
+    margin-left: 0vw;
+    margin-top: -5vw;
+}
+
+.Column1 {    
+    margin-left: 5vw;
+    margin-top: -45vw;
+}
+
+.Column2 {    
+    margin-left: 10vw;
+    margin-top: -45vw;
+}
+
+.Column3 {    
+    margin-left: 15vw;
+    margin-top: -45vw;
+}
+
+.Column4 {    
+    margin-left: 20vw;
+    margin-top: -45vw;
+}
+
+.Column5 {    
+    margin-left: 25vw;
+    margin-top: -45vw;
+}
+
+.Column6 {    
+    margin-left: 30vw;
+    margin-top: -45vw;
+}
+
+.Column7 {    
+    margin-left: 35vw;
+    margin-top: -45vw;
+}
+
+.Column8 {    
+    margin-left: 40vw;
+    margin-top: -45vw;
+}
+
+.Column9 {    
+    margin-left: 45vw;
+    margin-top: -45vw;
+}
+
+.Column10 {    
+    margin-left: 50vw;
+    margin-top: -45vw;
+}
+
+.Column11 {    
+    margin-left: 55vw;
+    margin-top: -45vw;
+}
+
+.Column12 {    
+    margin-left: 60vw;
+    margin-top: -45vw;
+}
+
+.Column13 {    
+    margin-left: 65vw;
+    margin-top: -45vw;
+}
+
+.Column14 {    
+    margin-left: 70vw;
+    margin-top: -45vw;
+}
+
+.Column15 {    
+    margin-left: 75vw;
+    margin-top: -45vw;
+}
+
+.Column16 {    
+    margin-left: 80vw;
+    margin-top: -45vw;
+}
+
+.Column17 {    
+    margin-left: 85vw;
+    margin-top: -45vw;
 }

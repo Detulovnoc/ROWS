@@ -1,92 +1,57 @@
-@media(min-width: 250px) {
-    .Diamond{
-        background: url('RowBlockDiamond.png') round;
-        width: 12.5px;
-        height: 12.5px;
-    }
-    
-    .Emerald{
-        background: url('RowBlockEmerald.png') round;
-        width: 12.5px;
-        height: 12.5px;
-    }
-    
-    .Ruby{
-        background: url('RowBlockRuby.png') round;
-        width: 12.5px;
-        height: 12.5px;
-    }
-    
-    .Sapphire{
-        background: url('RowBlockSapphire.png') round;
-        width: 12.5px;
-        height: 12.5px;
-    }
-    
-    .Empty{
-        width: 12.5px;
-        height: 12.5px;
-    }
+.Diamond{
+    background: url('RowBlockDiamond.png') round;
+    width: 5vw;
+    height: 5vw;
 }
 
-@media(min-width: 500px) {
-    .Diamond{
-        background: url('RowBlockDiamond.png') round;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .Emerald{
-        background: url('RowBlockEmerald.png') round;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .Ruby{
-        background: url('RowBlockRuby.png') round;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .Sapphire{
-        background: url('RowBlockSapphire.png') round;
-        width: 25px;
-        height: 25px;
-    }
-    
-    .Empty{
-        width: 25px;
-        height: 25px;
-    }
+.Emerald{
+    background: url('RowBlockEmerald.png') round;
+    width: 5vw;
+    height: 5vw;
 }
 
-@media(min-width: 1000px) {
-    .Diamond{
-        background: url('RowBlockDiamond.png') round;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .Emerald{
-        background: url('RowBlockEmerald.png') round;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .Ruby{
-        background: url('RowBlockRuby.png') round;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .Sapphire{
-        background: url('RowBlockSapphire.png') round;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .Empty{
-        width: 50px;
-        height: 50px;
-    }
+.Ruby{
+    background: url('RowBlockRuby.png') round;
+    width: 5vw;
+    height: 5vw;
+}
+
+.Sapphire{
+    background: url('RowBlockSapphire.png') round;
+    width: 5vw;
+    height: 5vw;
+}
+
+.Empty{
+    width: 5vw;
+    height: 5vw;
+}
+
+.DiamondSmall{
+    background: url('RowBlockDiamond.png') round;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.EmeraldSmall{
+    background: url('RowBlockEmerald.png') round;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.RubySmall{
+    background: url('RowBlockRuby.png') round;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.SapphireSmall{
+    background: url('RowBlockSapphire.png') round;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.EmptySmall{
+    width: 2.5vw;
+    height: 2.5vw;
 }
